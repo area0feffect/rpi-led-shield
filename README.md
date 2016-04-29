@@ -57,12 +57,43 @@ Solder it up. This version of the board has 5 parts and should take
 </pre>
 
 <br/>
-<br/>
 
 ###STEP 3: ATTACH
 ![plugged-in](http://i.imgur.com/YSvPC3c.png)
 <pre>
 DIN, POWER, GROUND
+</pre>
+
+<br/>
+
+#INSTALLING DRIVERS
+We are using the rpi_ws281 library from jgarff. You can find a more detailed version of the [driver installation guide from adafruit](https://learn.adafruit.com/neopixels-on-raspberry-pi/software).
+
+
+
+###STEP 1: Update your Pi
+<pre>
+sudo apt-get update
+sudo apt-get install build-essential python-dev git scons swig
+</pre>
+
+###STEP 2: Download the rpi_ws281 library
+<pre>
+git clone https://github.com/jgarff/rpi_ws281x.git
+cd rpi_ws281x
+scons
+</pre>
+
+###STEP 3: Install
+<pre>
+cd python
+sudo python setup.py install
+</pre>
+
+###STEP 4: Run an example
+<pre>
+cd python/examples
+sudo python strandtest.py
 </pre>
 
 <br/>
