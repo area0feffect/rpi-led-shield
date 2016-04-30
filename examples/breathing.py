@@ -1,5 +1,5 @@
-# NeoPixel library strandtest example
-# This is a simple breathing example
+# Based off NeoPixel library strandtest example
+# This is a simple light fade on / off exaple
 #
 
 import time
@@ -30,8 +30,8 @@ def breath(strip, color, speed, wait_ms=50):
 		strip.setBrightness(currentBrightness)
 		strip.show()
 
-	#increase and decrease the brightness linearly for
-	# a pusle or 'breathing' effect
+	#increase and decrease the brightness for
+	# a breathing kind of effect
 	currentBrightness += currentDirection * speed;
 	if (currentBrightness >= 255):
 		currentDirection *= -1
